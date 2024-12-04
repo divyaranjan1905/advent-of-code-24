@@ -12,9 +12,6 @@ inputData = do
       reports = map (map read . words) linesConent -- Maps first words to separate the strings by \n, then recursively maps read for each sublist
   return reports
 
-testReport :: [Int]
-testReport = [7, 6, 4, 2, 1] -- [69,67,64,63,61,60,58,55]
-
 -- Is the list sorted?
 isSortedAsc xs = all (uncurry (<=)) (zip xs (tail xs))
 isSortedDesc xs = all (uncurry (>=)) (zip xs (tail xs))
